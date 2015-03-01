@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, '../utils')
 
 import utils as utils
-from math import *
+import math as math
 
 def integral (function, lowerbound, upperbound, interval_power):
   _lowerbound = lowerbound
