@@ -114,4 +114,15 @@ def to_math(function):
   fin_fun = paren_nxt_var(fin_fun, var)
   return fin_fun
 
+def is_in(value, percent, expected):
+  percent_up = 1+(percent*.01)
+  percent_down = 1-(percent*.01)
+  fix_up = expected*percent_up
+  fix_down = expected*percent_down
+  if (value <= fix_up and value >= fix_down and value >= 0):
+    return True
+  elif (value >= fix_up and value <= fix_down and value <= 0):
+    return True
+  else:
+    return False
 
